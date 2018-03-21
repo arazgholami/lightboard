@@ -12,7 +12,7 @@ Checkout releases page https://github.com/arazgholami/rebellion/releases
 Any contribution are welcome.
 
 ## Authors
-Back to 2014, this theme designed by Daniel Yavari for Shelfinfo project (RIP). And it's coded by me as front-end developer of shelfinfo. So after 4 years, I decided to publish source of project for free.
+Back to 2014, this theme designed by Daniel Yavari for Shelfinfo project (RIP). And it's coded by me as front-end developer of team. So after 4 years, I decided to publish theme as a open-srouce project.
 
 Araz Gholami <https://arazgholami.com>
 
