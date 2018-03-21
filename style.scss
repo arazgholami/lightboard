@@ -1,0 +1,301 @@
+/*
+Theme Name: Lightboard
+Theme URI: https://arazgholami.com/themes/Lightboard
+Author: Araz Gholami
+Author URI: https://alirezagholami.com/
+Description: Lightboard is a light,modern and responsive wordpress theme for Lightboard blog.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, fluid-layout, responsive-layout, editor-style, full-width-template, rtl-language-support
+Text Domain: SH
+*/
+
+/*==ColorSchemes====================================================================*/
+    $red:#b13638;
+    $redl:#dd4e4e;
+    $white:#fff;
+    $pl:#eee; //Light Paragraph
+    $pd:#888; //Dark Paragraph
+    $facebook-color:#46629b;
+    $twitter-color:#34a0c7;
+    $gplus-color:#da4836;
+    $feed-color:orange;
+/*==ColorSchemes====================================================================*/
+
+
+/*==Selection Custom Color==========================================================*/
+    ::selection
+    {
+      background: $redl;
+      color: $white;
+    }
+    ::-moz-selection 
+    {
+      background: $redl;
+      color: $white; 
+    }
+/*==Selection Custom Color==========================================================*/
+
+
+/*==ColorSchemes====================================================================*/
+    @font-face {
+        font-family: 'littlefish';
+        src: url('fonts/YekPezeshkSerif-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+/*==ColorSchemes====================================================================*/
+
+
+/*==ResetBootstrap==================================================================*/
+.btn{
+  outline: none !important;
+  border: none;
+  color: #fff;
+  transition: background 0.4s, color 0.1s;
+}
+.btn:hover,.btn:focus{
+    background: $redl;
+    color: #fff;
+}
+
+.dll{ //Download Light Button
+    background: none;
+    border: 1px solid $white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    top: 20px; left: 0px;
+    position: relative;
+    font: normal 16px littlefish;
+    float: left;
+    cursor: pointer;
+}.dll:hover,.dll:focus{
+    color: $redl;
+    background: $white;
+}
+
+.dld{ //Download Dark Button (Extened from .dll)
+     @extend .dll;
+     background: $redl;
+     padding-bottom: 12px;
+}.dld:hover,.dld:focus{
+    color: $white;
+    background: darken($redl, 20%);
+}
+
+
+.form-control {
+  box-shadow: none !important;
+}
+h1,h2,h3,h4,p,a,li
+{
+  font-family: littlefish,calibri;
+}
+ol,ul
+{
+  list-style: none;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color:$redl;
+  transition: text-shadow 0.4s;
+}a:hover,a:focus{color:$redl;text-decoration: none;}
+/*==ResetBootstrap==================================================================*/
+
+
+
+/*==MainStyle=======================================================================*/
+nav{
+    background: rgba(255,255,255,.8);
+    padding: 10px 0 15px 20px;
+    .navbar-brand{
+     img{
+        height: 70px;
+        float: right;
+        transition: opacity 0.4s;
+      }
+     h1{
+        display: none;
+      }
+     padding: 0;
+    }
+    ol{
+        li{
+          display: inline-block;
+          float: right;
+          position: relative;
+          a{
+            font: normal 16px littlefish;
+            margin: 20px 10px 0 10px;
+            padding: 5px 2px;
+            color: $redl;
+            text-decoration: none;
+            &:hover {
+              color: $redl;
+            }
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              bottom: 0;
+              right: 0;
+              background-color: $redl;
+              visibility: hidden;
+              -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+              -webkit-transition: all 0.3s ease-in-out 0s;
+              transition: all 0.3s ease-in-out 0s;
+            }
+            &:hover:before {
+              visibility: visible;
+              -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+            }
+          }
+        }
+    }
+    .dld{ //Download Dark Button (Extened from .dll)
+        background: $redl;
+        border: 1px solid $redl;
+        padding: 12px 20px;
+        border-radius: 30px;
+        position: relative;
+        top: 0px;
+        margin: 10px 0  0 20px;
+        font: normal 16px littlefish;
+        float: left;
+        cursor: pointer;
+        transition: color 0.1s, background 0.4s;
+    }.dld:hover,.dld:focus{
+        color: $redl;
+        background: $white;
+    }
+    transition: background 0.3s;
+}
+nav:hover{
+    background: rgba(255,255,255,1);
+}
+
+header{
+    background: url('img/bg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:390px;
+    z-index: 1;
+    color: $red !important;
+    h1{
+      font-size: 50px !important;
+    }
+    a{
+        display: block !important;
+        margin: 150px auto 0;        
+        width: 700px;
+        color: $white !important;
+        font: normal 20px littlefish !important;
+        text-align: center;
+    }
+    a:hover,a:focus{color: $white !important;}
+    p{
+        margin: 0px auto 0;        
+        width: 400px;
+        color: $white !important;
+        text-align: center;
+    }
+}
+
+
+
+article{
+    padding: 30px 0 30px 0;
+    text-align: right;
+    direction: rtl;
+    .author,.tags{
+        font-weight: bold;
+    }
+    .title-wrapper{
+        padding: 0;
+    }
+
+    .title{
+        font-weight: bold;
+    }
+
+    .date{
+        display: block;
+        margin: -10px 0 0 0;
+        color: #aaa;
+    }
+    .content{
+         margin: 5px 0 0 0px;
+         padding: 0 40px 0 10px;
+         p{
+            font: normal 16px littlefish;
+            line-height: 24px;
+         }
+    }
+    .readmore{
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+
+
+.bar{
+    margin: 0 !important;
+    padding: 60px 10px 30px !important;
+    text-align: center;
+    img{
+        display: block;
+        width: auto;
+        height: 70px;
+        margin: 60px auto;
+    }
+    p{
+        color:darken($pl,20%);
+        font: normal 16px littlefish !important;
+        display: inline-block;
+        margin-right: 50px;
+        direction: rtl;
+        text-align: right;
+    }
+    ol{
+        display: inline-block;
+        li{
+            display: inline;
+            margin-right: 5px;
+            direction: rtl;
+        text-align: right;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==MainStyle=======================================================================*/
+
+
+
