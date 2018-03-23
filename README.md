@@ -6,7 +6,7 @@ Lightboard is a free, light, modern, responsive and Open-Source wordpress theme
 ## How to Download
 This is a old-school project and still have some bugs, Use it by your own risk or if you're a developer and can fix this bugs by yourself.
 
-Checkout releases page https://github.com/arazgholami/rebellion/releases
+Checkout releases page https://github.com/arazgholami/lightboard/releases
 
 ## Contribution
 Any contribution are welcome.
